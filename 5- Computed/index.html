@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="main">
+    <h1>Listado de tareas</h1>
+    <hr>
+      <input type="text" v-model="task">
+      <button @click="addTask">Agregar Tarea</button>
+    <hr>
+    <ol>
+      <li v-for="item in tasks">
+        {{item.title}}
+      </li>
+    </ol>
+    <hr>
+    <h1>Tarea Completadas</h1>
+    <ol>
+      <li v-for="item in filterCompleted">
+        {{item.title}}
+      </li>
+    </ol>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
